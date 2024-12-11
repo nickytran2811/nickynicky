@@ -1,0 +1,279 @@
+/* Thanh điều hướng */
+.header-nav {
+    background: rgba(0, 0, 0, 0.8); /* Nền mờ */
+    color: white;
+    display: flex;
+    justify-content: center;
+    padding: 10px 0;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+  }
+  
+  .header-nav a {
+    color: white;
+    text-decoration: none;
+    margin: 0 15px;
+    font-size: 1.1rem;
+    text-transform: uppercase;
+    font-weight: bold;
+  }
+  
+  .header-nav a.active {
+    border-bottom: 2px solid #fff;
+  }
+  
+  /* Toàn bộ trang với ảnh nền động */
+  .updating-section {
+    height: 100vh; /* Chiều cao toàn màn hình */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: url('coming-soon.jpg') no-repeat center center/cover; /* Nền */
+    color: white;
+    text-align: center;
+    padding: 20px;
+    animation: zoomInBackground 10s infinite alternate; /* Hiệu ứng zoom */
+  }
+  
+  /* Hiệu ứng zoom nền */
+  @keyframes zoomInBackground {
+    0% {
+      transform: scale(1);
+    }
+    50% {
+      transform: scale(1.1);
+    }
+    100% {
+      transform: scale(1);
+    }
+  }
+  
+  /* Nội dung chính */
+  .updating-content {
+    background: rgba(0, 0, 0, 0.6); /* Nền mờ cho nội dung */
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+    animation: fadeIn 3s ease; /* Hiệu ứng mờ dần */
+  }
+  
+  /* Hiệu ứng chữ xuất hiện */
+  .animated-text {
+    animation: fadeInUp 2s ease, pulse 3s infinite;
+  }
+  
+  @keyframes fadeInUp {
+    0% {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  /* Hiệu ứng nhấp nháy nhẹ */
+  @keyframes pulse {
+    0%, 100% {
+      transform: scale(1);
+    }
+    50% {
+      transform: scale(1.05);
+    }
+  }
+  
+  .btn {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 10px 20px;
+    background: #3498db;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background 0.3s ease;
+  }
+  
+  .btn:hover {
+    background: #1abc9c;
+  }
+/* Nút Back to Home */
+.btn-back-home {
+    display: inline-block;
+    padding: 15px 30px;
+    font-size: 1rem;
+    font-weight: bold;
+    color: white;
+    text-decoration: none;
+    text-transform: uppercase;
+    background: linear-gradient(135deg, #3498db, #9b59b6); /* Gradient màu nền */
+    border-radius: 50px; /* Bo góc */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3); /* Đổ bóng */
+    transition: all 0.3s ease-in-out; /* Hiệu ứng chuyển tiếp */
+    margin-top: 20px;
+  }
+  
+  /* Hiệu ứng hover */
+  .btn-back-home:hover {
+    background: linear-gradient(135deg, #1abc9c, #2ecc71); /* Thay đổi màu gradient */
+    transform: translateY(-5px); /* Nổi lên */
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4); /* Đổ bóng lớn hơn */
+  }
+  
+  /* Hiệu ứng nhấn */
+  .btn-back-home:active {
+    transform: translateY(1px); /* Giảm độ nổi */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3); /* Đổ bóng nhỏ hơn */
+  }
+  .btn-back-home {
+    position: relative;
+    overflow: hidden;
+  }
+  
+  .btn-back-home::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 200%;
+    height: 100%;
+    background: rgba(255, 255, 255, 0.2);
+    transform: skewX(-45deg);
+    transition: all 0.3s ease;
+    z-index: 1;
+  }
+  
+  .btn-back-home:hover::before {
+    left: 100%; /* Ánh sáng quét qua nút */
+  }
+  
+  .btn-back-home:hover {
+    color: white; /* Đảm bảo màu chữ vẫn rõ ràng */
+    background: linear-gradient(135deg, #1abc9c, #2ecc71); /* Gradient khi hover */
+  }
+  .btn-back-home {
+    background: linear-gradient(135deg, #3498db, #9b59b6);
+    background-size: 300% 300%;
+    animation: gradientMove 5s infinite;
+  }
+  
+  @keyframes gradientMove {
+    0% {
+      background-position: 0% 50%;
+    }
+    50% {
+      background-position: 100% 50%;
+    }
+    100% {
+      background-position: 0% 50%;
+    }
+  }
+/* Toàn bộ trang với ảnh nền */
+.updating-section {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: url('coming-soon.jpg') no-repeat center center/cover;
+    color: white;
+    text-align: center;
+    padding: 20px;
+    animation: zoomInBackground 10s infinite alternate;
+  }
+  
+  /* Nội dung chính */
+  .updating-content {
+    background: rgba(0, 0, 0, 0.6);
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+    animation: fadeIn 3s ease;
+  }
+  
+  /* Loading Animation */
+  .loading-animation {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+    gap: 10px; /* Khoảng cách giữa các vòng tròn */
+  }
+  
+  .loading-circle {
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    background-color: white;
+    animation: bounce 1.5s infinite;
+  }
+  
+  /* Animation cho các vòng tròn */
+  .loading-circle:nth-child(1) {
+    animation-delay: 0s;
+  }
+  
+  .loading-circle:nth-child(2) {
+    animation-delay: 0.3s;
+  }
+  
+  .loading-circle:nth-child(3) {
+    animation-delay: 0.6s;
+  }
+  
+  /* Keyframes cho bounce */
+  @keyframes bounce {
+    0%, 80%, 100% {
+      transform: scale(0);
+      opacity: 0.5;
+    }
+    40% {
+      transform: scale(1);
+      opacity: 1;
+    }
+  }
+  
+  /* Hiệu ứng chữ xuất hiện */
+  .animated-text {
+    animation: fadeInUp 2s ease, pulse 3s infinite;
+  }
+  
+  @keyframes fadeInUp {
+    0% {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  @keyframes pulse {
+    0%, 100% {
+      transform: scale(1);
+    }
+    50% {
+      transform: scale(1.05);
+    }
+  }
+  .loading-circle {
+    background: linear-gradient(135deg, #3498db, #9b59b6);
+    animation: bounce 1.5s infinite;
+  }
+  .loading-circle {
+    width: 20px;
+    height: 20px;
+  }
+  @keyframes bounce {
+    0%, 80%, 100% {
+      transform: scale(0);
+      opacity: 0.5;
+    }
+    40% {
+      transform: scale(1);
+      opacity: 1;
+    }
+  }
+                   
